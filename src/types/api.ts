@@ -8,7 +8,7 @@ export type ApiUser = {
 }
 
 export type ApiPost = {
-  id: Id
+  _id: Id
   title: string
   content: string
   sender: string

@@ -48,9 +48,8 @@ export function PostsPage() {
       {!loading && !error ? (
         <ListGroup>
           {posts.map((p) => {
-            const postId = p._id ?? p.id
             return (
-            <ListGroupItem key={String(postId ?? p.title)}>
+            <ListGroupItem key={String(p._id)}>
               <div className="d-flex justify-content-between align-items-start gap-3">
                 <div className="flex-grow-1">
                   <h5 className="mb-1">{p.title}</h5>
@@ -58,15 +57,10 @@ export function PostsPage() {
                     {p.content?.slice(0, 140) ?? ''}
                     {p.content && p.content.length > 140 ? '…' : ''}
                   </p>
-                  {p.user?.username ? <small className="text-secondary">by {p.user.username}</small> : null}
                 </div>
-                {postId !== undefined ? (
-                  <Link className="btn btn-outline-primary btn-sm" to={`/posts/${postId}`}>
-                    View
-                  </Link>
-                ) : (
-                  <span className="text-muted">Missing id</span>
-                )}
+                <Link className="btn btn-outline-primary btn-sm" to={`/posts/${p._id}`}>
+                  View
+                </Link>
               </div>
             </ListGroupItem>
             )
