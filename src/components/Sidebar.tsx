@@ -38,8 +38,6 @@ const SideLink = styled(NavLink)`
 `
 
 export function Sidebar() {
-  const { accessToken } = useAuth()
-
   return (
     <SidebarWrap>
       <SideNav>
@@ -47,8 +45,6 @@ export function Sidebar() {
           <BsHouseDoor />
           Posts
         </SideLink>
-
-        {accessToken ? (
           <>
             <SideLink to="/posts/new">
               <BsPlusSquare />
@@ -59,7 +55,6 @@ export function Sidebar() {
               Profile
             </SideLink>
           </>
-        ) : null}
       </SideNav>
     </SidebarWrap>
   )
