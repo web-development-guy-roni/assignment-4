@@ -1,6 +1,8 @@
+// Guy-Rozenbaum-214424814-Roni-Taktook-213207640
 import { NavLink } from 'react-router-dom'
 import styled from 'styled-components'
-import { BsHouseDoor } from 'react-icons/bs'
+import { BsHouseDoor, BsPersonCircle, BsPlusSquare } from 'react-icons/bs'
+import { useAuth } from '../context/AuthContext'
 
 const SidebarWrap = styled.aside`
   width: 260px;
@@ -43,8 +45,17 @@ export function Sidebar() {
           <BsHouseDoor />
           Posts
         </SideLink>
+          <>
+            <SideLink to="/posts/new">
+              <BsPlusSquare />
+              Create Post
+            </SideLink>
+            <SideLink to="/profile">
+              <BsPersonCircle />
+              Profile
+            </SideLink>
+          </>
       </SideNav>
     </SidebarWrap>
   )
 }
-

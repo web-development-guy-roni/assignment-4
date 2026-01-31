@@ -1,3 +1,4 @@
+// Guy-Rozenbaum-214424814-Roni-Taktook-213207640
 import axios from 'axios'
 
 export function getErrorMessage(err: unknown): string {
@@ -12,4 +13,3 @@ export function getErrorMessage(err: unknown): string {
   if (err instanceof Error) return err.message
   return 'Something went wrong'
 }
-

@@ -1,3 +1,4 @@
+// Guy-Rozenbaum-214424814-Roni-Taktook-213207640
 export type Id = string | number
 
 export type ApiUser = {
@@ -7,7 +8,7 @@ export type ApiUser = {
 }
 
 export type ApiPost = {
-  id: Id
+  _id: Id
   title: string
   content: string
   sender: string
@@ -29,4 +30,3 @@ export type LoginApiResponse = {
     email: string
   }
 }
-
