@@ -1,3 +1,4 @@
+// Guy-Rozenbaum-214424814-Roni-Taktook-213207640
 import { http } from './http'
 import type { ApiPost } from '../types/api'
 
@@ -23,4 +24,3 @@ export async function createPost(params: {
   })
   return res.data
 }
-

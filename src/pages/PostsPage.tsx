@@ -1,3 +1,4 @@
+// Guy-Rozenbaum-214424814-Roni-Taktook-213207640
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { ErrorAlert } from '../components/ErrorAlert'
@@ -78,4 +79,3 @@ export function PostsPage() {
     </div>
   )
 }
-

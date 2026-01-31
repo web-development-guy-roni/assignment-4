@@ -1,6 +1,9 @@
+// Guy-Rozenbaum-214424814-Roni-Taktook-213207640
 import { Outlet } from 'react-router-dom'
 import styled from 'styled-components'
 import { AppNavbar } from './AppNavbar'
+import { Sidebar } from './Sidebar'
+import { useAuth } from '../context/AuthContext'
 
 const Shell = styled.div`
   min-height: 100vh;
@@ -20,10 +23,12 @@ const Content = styled.main`
 `
 
 export function MainLayout() {
+  const { accessToken } = useAuth()
   return (
     <Shell>
       <AppNavbar />
       <Body>
+        {accessToken && <Sidebar />}
         <Content>
           <Outlet />
         </Content>

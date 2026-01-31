@@ -1,0 +1,15 @@
+// Guy-Rozenbaum-214424814-Roni-Taktook-213207640
+import React from 'react'
+import { Navigate, useLocation } from 'react-router-dom'
+import { useAuth } from '../context/AuthContext'
+
+export function RequireAuth(props: { children: React.ReactNode }) {
+  const { accessToken } = useAuth()
+  const location = useLocation()
+
+  if (!accessToken) {
+    return <Navigate to="/login" replace state={{ from: location.pathname }} />
+  }
+
+  return <>{props.children}</>
+}

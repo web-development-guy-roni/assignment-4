@@ -1,3 +1,4 @@
+// Guy-Rozenbaum-214424814-Roni-Taktook-213207640
 export type StoredAuthUser = {
   id: string
   username?: string
@@ -41,4 +42,3 @@ export function clearAuthStorage() {
   localStorage.removeItem(REFRESH_TOKEN_KEY)
   localStorage.removeItem(USER_KEY)
 }
-
